@@ -6,4 +6,12 @@ public class Main{
     System.out.println("Hello");
     System.out.println("it Works");
   }
+  
+  	public void setupAdminPanel() {
+		
+	}
+	
+	public void setupSearchPanel() {
+		
+	}
 }
