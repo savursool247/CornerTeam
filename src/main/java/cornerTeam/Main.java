@@ -26,10 +26,10 @@ public class Main
     	admin.setVisible(true);
     	admin.pack();
     	admin.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-  	}
+	}
   
-  	public static JPanel setupAdminPanel(JPanel panel) 
-  	{
+	public static JPanel setupAdminPanel(JPanel panel) 
+	{
   		JLabel inMaint;
   		JLabel lblIndexCount;
   		JLabel lblVersionNum;
@@ -51,8 +51,8 @@ public class Main
     	btnResetWin = new JButton("Reset Windows");
     	adminTable = new JTable(data, colNames);
   		
-  		JScrollPane scrollPane = new JScrollPane(adminTable);
-  		adminTable.setFillsViewportHeight(true);
+    	JScrollPane scrollPane = new JScrollPane(adminTable);
+    	adminTable.setFillsViewportHeight(true);
   		
        	panel.setPreferredSize (new Dimension (565, 320));
        	panel.setLayout (null);
