@@ -33,23 +33,23 @@ public class Main
   		JLabel inMaint;
   		JLabel lblIndexCount;
   		JLabel lblVersionNum;
-    	JButton btnAddFile;				// "Add File" Button
-    	JButton btnRebuild;				// "Rebuild Out-of-Date" Button
-    	JButton btnRemove;				// "Remove Selected Files" Button
-    	JButton btnResetWin;			// "Reset Windows" Button
+    	JButton btnAddFile;			// "Add File" Button
+    	JButton btnRebuild;			// "Rebuild Out-of-Date" Button
+    	JButton btnRemove;			// "Remove Selected Files" Button
+    	JButton btnResetWin;		// "Reset Windows" Button
     	JTable adminTable;
   		
     	String[] colNames = {"File Name","Status"};
-  		Object[][] data = {};
+    	Object[][] data = {};
   		
-  		lblIndexCount = new JLabel ("Number of files indexed: 0");
-  		inMaint = new JLabel ("Search Engine - Index Maintenance View");
-  		lblVersionNum = new JLabel ("Search Engine version 1.1");
-  		btnAddFile = new JButton("Add File");
-  		btnRebuild = new JButton("Rebuild Out-of-Date");
-  		btnRemove = new JButton("Remove Selected Files");
-  		btnResetWin = new JButton("Reset Windows");
-  		adminTable = new JTable(data, colNames);
+    	lblIndexCount = new JLabel ("Number of files indexed: 0");
+    	inMaint = new JLabel ("Search Engine - Index Maintenance View");
+    	lblVersionNum = new JLabel ("Search Engine version 1.1");
+    	btnAddFile = new JButton("Add File");
+    	btnRebuild = new JButton("Rebuild Out-of-Date");
+    	btnRemove = new JButton("Remove Selected Files");
+    	btnResetWin = new JButton("Reset Windows");
+    	adminTable = new JTable(data, colNames);
   		
   		JScrollPane scrollPane = new JScrollPane(adminTable);
   		adminTable.setFillsViewportHeight(true);
@@ -64,18 +64,18 @@ public class Main
        	panel.add(btnRebuild);
        	panel.add(btnRemove);
        	panel.add(btnResetWin);
-  		panel.add(scrollPane);
+       	panel.add(scrollPane);
   		
-  		lblIndexCount.setBounds (7, 293, 180, 30);
-  		inMaint.setBounds (40, 0, 500, 30);
-  		lblVersionNum.setBounds (380, 293, 180, 30);
-  		btnAddFile.setBounds(380, 52, 87, 23);
-  		btnRebuild.setBounds(380, 210, 180, 23);
-  		btnRemove.setBounds(380, 235, 180, 23);
-  		btnResetWin.setBounds(380, 271, 125, 23);
-  		scrollPane.setBounds (7, 30, 370, 265);
+       	lblIndexCount.setBounds (7, 293, 180, 30);
+       	inMaint.setBounds (40, 0, 500, 30);
+       	lblVersionNum.setBounds (380, 293, 180, 30);
+       	btnAddFile.setBounds(380, 52, 87, 23);
+       	btnRebuild.setBounds(380, 210, 180, 23);
+       	btnRemove.setBounds(380, 235, 180, 23);
+       	btnResetWin.setBounds(380, 271, 125, 23);
+       	scrollPane.setBounds (7, 30, 370, 265);
   		
-		return panel;
+       	return panel;
 	}
 	
 	public static JPanel setupSearchPanel(JPanel panel) 
@@ -92,10 +92,10 @@ public class Main
     	JButton btnAbout;				// "About" Button
     	JButton btnAdmin;				// "Admin" Button
 	    
-	  	//construct preComponents
+    	//construct preComponents
        	String[] listSearchItems = {};
 
-   		//construct components
+       	//construct components
        	lblsearch = new JLabel ("Search: ");
        	txtSearchBar = new JTextField (1);
        	chkbxAnd = new JCheckBox ("All Key Words");
