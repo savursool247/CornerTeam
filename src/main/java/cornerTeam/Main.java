@@ -10,6 +10,7 @@ public class Main
 
 	public static void main(String[]args)
 	{
+		System.out.println("TEST: Branch Test");
     	JFrame search = new JFrame();
     	JFrame admin = new JFrame();
     	JPanel searchPanel = new JPanel();
