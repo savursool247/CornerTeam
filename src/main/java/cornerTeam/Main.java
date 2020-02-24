@@ -30,19 +30,20 @@ public class Main
   
 	public static JPanel setupAdminPanel(JPanel panel) 
 	{
-  		JLabel inMaint;
-  		JLabel lblIndexCount;
-  		JLabel lblVersionNum;
+		Integer intIndexCount = 0;
+  		JLabel inMaint;				// "Search Engine - Index Maintenance View" Label
+  		JLabel lblIndexCount;		// "Number of filed indexed: " Label
+  		JLabel lblVersionNum;		// "Search Engine version 1.1" Label
     	JButton btnAddFile;			// "Add File" Button
     	JButton btnRebuild;			// "Rebuild Out-of-Date" Button
     	JButton btnRemove;			// "Remove Selected Files" Button
     	JButton btnResetWin;		// "Reset Windows" Button
-    	JTable adminTable;
+    	JTable adminTable;			// Variable name for Index table
   		
     	String[] colNames = {"File Name","Status"};
     	Object[][] data = {};
   		
-    	lblIndexCount = new JLabel ("Number of files indexed: 0");
+    	lblIndexCount = new JLabel ("Number of files indexed: " + intIndexCount);
     	inMaint = new JLabel ("Search Engine - Index Maintenance View");
     	lblVersionNum = new JLabel ("Search Engine version 1.1");
     	btnAddFile = new JButton("Add File");
@@ -51,6 +52,7 @@ public class Main
     	btnResetWin = new JButton("Reset Windows");
     	adminTable = new JTable(data, colNames);
   		
+    	inMaint.setFont(new Font("", Font.BOLD, 17));
     	JScrollPane scrollPane = new JScrollPane(adminTable);
     	adminTable.setFillsViewportHeight(true);
   		
@@ -67,7 +69,7 @@ public class Main
        	panel.add(scrollPane);
   		
        	lblIndexCount.setBounds (7, 293, 180, 30);
-       	inMaint.setBounds (40, 0, 500, 30);
+       	inMaint.setBounds (25, 0, 500, 27);
        	lblVersionNum.setBounds (380, 293, 180, 30);
        	btnAddFile.setBounds(380, 52, 87, 23);
        	btnRebuild.setBounds(380, 210, 180, 23);
@@ -105,7 +107,7 @@ public class Main
        	listSearch = new JList (listSearchItems);
        	btnExit = new JButton ("Exit");
        	btnAbout = new JButton ("About");
-       	btnAdmin = new JButton ("Admin Panel...");
+       	btnAdmin = new JButton ("Admin...");
 
        	//set components properties
        	listSearch.setEnabled (false);
@@ -132,7 +134,7 @@ public class Main
        	chkbxAnd.setBounds (110, 40, 110, 25);
        	chkbxOr.setBounds (270, 40, 120, 25);
        	chkbxExactPhrase.setBounds (425, 40, 115, 25);
-       	btnSearch.setBounds (560, 5, 100, 25);
+       	btnSearch.setBounds (560, 5, 100, 28);
        	listSearch.setBounds (20, 65, 525, 295);
        	btnExit.setBounds (560, 65, 100, 25);
        	btnAbout.setBounds (555, 330, 100, 25);
